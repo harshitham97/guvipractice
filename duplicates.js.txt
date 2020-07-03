@@ -1,0 +1,32 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const elem = [];
+inp.on("line", (data) => {
+  elem.push(data)
+});
+inp.on("close",()=>{
+   let count = {};
+
+var dummy = elem[0].split('');
+console.log(dummy)
+for(i=0;i<dummy.length;i++)
+{
+
+  if (count[dummy[i]] === undefined)
+  {
+     count[dummy[i]] = 1;
+  }
+  else
+  {
+     count[dummy[i]] = count[dummy[i]] + 1
+  }
+
+}
+console.log(count);
+ 
+});

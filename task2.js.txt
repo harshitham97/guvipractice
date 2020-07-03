@@ -1,0 +1,160 @@
+//Task 2
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const elem = [];
+inp.on("line", (data) => {
+  elem.push(data)
+});
+inp.on("close",()=>{
+//square of a Number
+var num = 2;
+console.log(num*num);
+console.log(Math.pow(num,2))
+
+//swapping 2 numbers
+var a = 10, b = 20;
+console.log("before swap: "+a +" "+b)
+var temp = a;
+a = b;
+b = temp;
+console.log("after swap: "+ a+ " "+ b)
+console.log("before swap: "+a +" "+b)
+a = a+b;
+b = a-b;
+a = a-b;
+console.log("after swap: "+ a+ " "+ b)
+
+//addition of 3 numbers
+var sum =0;
+for(var i=0;i<elem.length;i++)
+    sum += +(elem[i])
+console.log(sum)
+
+//celcius to farehnite
+var degree = 32
+console.log((9/5 * +(degree) )+ 32)
+
+//meter to miles
+var meter= 1;
+//1609.344 miles = 1m
+console.log(+(meter)/1609.344)
+
+var pounds = 40
+console.log(+(pounds)/2.205)
+
+//batting average
+var noofruns = 200, notout = 1, matches = 5, innigs =5;
+var battingavg = +(noofruns)/(+(innigs)- +(notout))
+console.log(battingavg)
+
+var testScores = elem[1].split(" ")
+var total = 0
+for(var j=0;j<testScores.length;j++)
+   total = total + +(testScores[j]);
+console.log(total/testScores.length)
+
+//power of any number
+var x = 10, y = 2
+console.log(Math.pow(x,y))
+
+//simpleinterest
+var p = 1000, t = 2, r = 7.5
+console.log("simple interest: "+ (+(p)* +(t) * +(r)) / 100)
+
+//equilateral triangle
+var side = 4
+console.log("Area of equilateral triangle: " + (Math.sqrt(3)/4)*(+(side*side)) )
+ 
+//isosceles triangle
+var sidea = 2
+console.log("area of isosceles triangle: "+ (1/2 * +(sidea*sidea)))
+
+//volume of sphere
+var radius = 2
+console.log("volume of sphere: "+ (4/3 * 22/7 * parseFloat(Math.pow(radius, 3))));
+
+//volume of trianglr prism
+var heightofprism = 10, b1 = 10, b2 = 20,h = 2;
+var basearea = 1/2 * +(h) * (+(b1)+ +(b2))
+console.log("volume of prism: "+ (basearea* +(heightofprism)))
+
+//volume of rectanglr prism
+var heightofprism = 2, len = 2, br = 2
+basearea = +(len * br)
+console.log("volume: " + (basearea * +(heightofprism)))
+
+//volume of cylindrical prism
+var radius = 2 , heightofprism = 4
+var basearea = 22/7 * radius * radius
+console.log("volume of cylnder: "+ (basearea * heightofprism))
+
+//area of triangle = 1/2 * b *h
+var b = 2 , h = 2
+console.log("Area of triangle: " + (1/2*b*h))
+
+//discount 
+var soldCost = 1000, actualCost = 500
+console.log("Discount of product: "+ soldCost - actualCost)
+
+//area, circumference, diameter
+var rad = 2
+console.log("Area of circle: "+ (22/7*(rad*rad)))
+console.log("Diameter: " + (2*rad))
+console.log("circumference: "+ (2*22/7*rad))
+
+//calculator
+var sym = '';
+var a = 10, b = 20;
+var res = 0;
+switch(sym)
+{
+    case '+':
+       res = a + b;
+       console.log(res);
+       break;
+
+    case '-':
+        res = a - b;
+        console.log(res);
+        break;
+    
+    case '*':
+        res = a *b;
+        console.log(res);
+        break;
+        
+    case '/':
+        res = a/b;
+        console.log(res);
+        break;
+        
+    default:
+        console.log("no input found")
+        break;
+}
+
+for(var i=0; i<=5;i++)
+{
+    console.log('*****'+ '\n')
+}
+
+//electicity bill one unit = 1000
+var watssperday = 100
+var watspermonth = 100 * 30
+var units = watspermonth / 1000
+console.log("total energy bill1: "+ (units*10))
+
+// program to calculate cgpa
+// 5 subects grade
+var a = [8,9.4,6,7.5,8]
+var sum = 0;
+for(var k=0;k<a.length;k++)
+{
+    sum += a[k]
+}
+console.log("cgpa: " + (sum/a.length))
+});

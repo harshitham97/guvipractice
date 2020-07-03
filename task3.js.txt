@@ -1,0 +1,146 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+let foods = []
+inp.on("line", (data) => {
+  foods.push(data)
+});
+inp.on("close", ()=>{
+
+//print triangle pattern   
+for (var i = 0; i <7; i++) {
+  var str = "";
+  for (var j = 0; j <= i; j++) {
+  str += "#";
+     }
+ console.log(str);
+}
+
+var strArray= ["<option>Jazz</option>",
+      "<option>Blues</option>",
+      "<option>New Age</option>",
+      "<option>Classical</option>",
+      "<option>Opera</option>"]
+
+for(var k=0;k<strArray.length;k++)
+{
+console.log(strArray[k])
+} 
+
+//Arrays length without using length
+var myarray = [11,22,33,44,55]
+var count = 0
+while(myarray[count] !==undefined)
+    count++
+console.log(count)
+
+console.log(foods[5])
+var fc = 0
+while(foods[fc] !== undefined)
+    fc++
+console.log(fc)
+
+let friends = [
+"Mari",
+"MaryJane",
+"CaptianAmerica",
+"Munnabai",
+"Jeff",
+"AAK chandran"
+]
+
+function dataHandling(input){
+for(var k=0;k<friends.length;k++)
+{
+    if(friends[k] == "Mari")
+        friends[k] = "Munnabai"
+}
+}
+dataHandling(friends);
+console.log(friends)
+
+function until(input){
+for(var k=0;k<friends.length;k++)
+{
+    if(friends[k] == "CaptianAmerica")
+        break;
+    else
+        console.log(friends[k])
+}
+}
+until(friends);
+
+//find your friend
+function friendornot(input, name){
+var temo = 0 , ans = ""
+var ans = input.includes(name)
+return ans
+}
+let found = friendornot(friends,"hars");
+console.log(found);
+
+//combining lists
+var friends1 = [
+"Mari",
+"MaryJane",
+"CaptianAmerica",
+"Munnabai",
+"Jeff",
+"AAK chandran"
+];
+var friends2 = [
+"Gabbar",
+"Rajinikanth",
+"Mass",
+"Spiderman",
+"Jeff",
+"ET"
+];
+function combine(input, input2){
+//Your code goes here
+var dummy = []
+dummy  = input2.concat(input);
+console.log(dummy)
+dummy.sort();
+console.log(dummy)
+}
+combine(friends1, friends2);
+
+//add at the begining
+friends2.unshift("Jack")
+friends2[friends2.length] = "Harshitha"
+// or using push
+friends2.push("Vinu")
+console.log(friends2)
+
+//add Mr and Mrs
+for(var i=0;i<friends1.length;i++)
+{
+    friends1[i] = "Mr "+friends1[i];
+}
+console.log(friends1)
+
+var stri = ""
+var stri = friends1.join()
+console.log(stri)
+
+var dummy =[]
+for(var i=0;i<friends2.length;i++)
+{
+for(var j=0;j<friends2[i].length;j++)
+{
+if(friends2[i].charAt(j) == 'a')
+{
+    dummy.push(friends2[i])
+}
+}
+}
+console.log(dummy)
+
+
+
+});

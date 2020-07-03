@@ -1,0 +1,32 @@
+//Task 1
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const elem = [];
+inp.on("line", (data) => {
+  elem.push(data)
+});
+inp.on("close",()=>{
+   let count = {};
+var b,c,d,e;
+console.log(b+" "+c+" "+d+" "+e)
+var dummy = '20';
+var temp = null ;
+var a;
+console.log(parseInt(dummy)+" "+ +(temp) + " " + Number(dummy))
+
+//Reading multiple lines
+console.log(elem)
+for(var i=0;i<elem.length;i++)
+{
+  console.log(elem[i])  
+}
+
+//reading in single line
+console.log(elem[0].split(" "))
+
+ 
+});
